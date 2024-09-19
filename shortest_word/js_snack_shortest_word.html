@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shortest Word - Code Wars</title>
+</head>
+<body>
+    <!-- https://www.codewars.com/kata/57cebe1dc6fdc20c57000ac9/javascript -->
+    <script>
+        //https://www.codewars.com/kata/57cebe1dc6fdc20c57000ac9/javascript
+        function findShort(s){
+            let less_length = 1000;
+                    
+            s.split(' ').map((arr) => {
+                less_length = (arr.length < less_length) ? arr.length : less_length;  
+            });
+                    
+            return less_length;
+        }
+
+        console.info(findShort("bitcoin take over the world maybe who knows perhaps")); // 3
+    </script>
+</body>
+</html>

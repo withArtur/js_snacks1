@@ -1,3 +1,5 @@
+// run with: node ./js_snack_rock_off.js
+
 function solve(a, b) {
     let [x, y] = [0, 0];
 
@@ -11,4 +13,4 @@ function solve(a, b) {
     else return `${x}, ${y}: that looks like a "draw"! Rock on!`;
 }
 
-solve([47, 50, 22], [26, 47, 12]); //'3, 0: Alice made "Kurt" proud!'
+console.info(solve([47, 50, 22], [26, 47, 12])); //'3, 0: Alice made "Kurt" proud!'
