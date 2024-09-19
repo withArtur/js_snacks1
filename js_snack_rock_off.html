@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Off - Code Wars</title>
+</head>
+
+<body>
+    <!-- https://www.codewars.com/kata/5b097da6c3323ac067000036/javascript -->
+    <script>
+        // https://www.codewars.com/kata/5b097da6c3323ac067000036/javascript
+
+        function solve(a, b) {
+            let points = [0, 0]; // Alice and bob points counter
+
+            // Comparing the scores equal arrays and add points to one of the Groups
+            for (i = 0; i <= a.length; i++) {
+                if (a[i] > b[i]) {
+                    // Alice +1
+                    points[0]++;
+                } else if ((b[i] > a[i])) {
+                    //Bob +1
+                    points[1]++;
+                }
+                // if the scores are equal no one get points 
+            }
+
+            // make the string and return the results points of Groups and the correct phrase for the winner! or equals
+            let result = points[0] + ', ' + points[1] + ': ';
+            if (points[0] > points[1]) {
+                result += 'Alice made "Kurt" proud!';
+            } else if (points[1] > points[0]) {
+                result += 'Bob made "Jeff" proud!';
+            } else {
+                result += 'that looks like a "draw"! Rock on!';
+            }
+
+            return result;
+        }       
+
+        console.info(solve([47, 7, 2], [47, 7, 2])); // '0, 0: that looks like a "draw"! Rock on!'
+    </script>
+</body>
+
+</html>
