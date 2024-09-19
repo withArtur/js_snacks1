@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spinning sdroW - Code Wars</title>
+</head>
+
+<body>
+    <!-- https://www.codewars.com/kata/5264d2b162488dc400000001 -->
+    <script>
+        // https://www.codewars.com/kata/5264d2b162488dc400000001
+        function spinWords(string) {
+            // separare per parole
+            let phrase = '',
+                words = [];
+
+            if (string.search(' ') >= 0) {
+                words = string.split(' ');
+            } else {
+                words.push(string);
+            }
+
+            // invertire le parole con piu di 5 lettere
+            words.forEach(function (w) {
+                if (w.length >= 5) {
+                    phrase += w.split("").reverse().join("") + ' ';
+                } else {
+                    phrase += w + ' ';
+                }
+            });
+
+            // restituire la frase
+            return phrase.trim();
+        }
+
+        console.info(spinWords("Hey fellow warriors")); // "Hey wollef sroirraw" 
+    </script>
+</body>
+
+</html>
