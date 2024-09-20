@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You Only need one - Code Wars</title>
+</head>
+<body>
+    <!-- https://www.codewars.com/kata/57cc975ed542d3148f00015b/javascript -->
+    <script>
+        // https://www.codewars.com/kata/57cc975ed542d3148f00015b/javascript
+        function check(a, x) {
+            let flag = false; // initial value of flag to false
+
+            // loop trough the array
+            for (v of a) {
+                // check if the value is in
+                if (v == x) {
+                    // set a flag to true
+                    flag = true;
+                }
+            }
+
+            return flag;
+        }
+
+        console.info(check([66, 101], 66)); // true
+    </script>
+</body>
+</html>
