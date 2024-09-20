@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Is Pangram - Code Wars</title>
+</head>
+<body>
+    <script>
+        function isPangram(string){
+            // make a array from string and one of a-z letters
+            const string_array = string.toLowerCase().split('').filter((letter) => letter !== ' '),
+                alphabet_array = 'abcdefghijklmnopqrstuvwxyz'.split('');
+            let count_alphabet = 0;
+            
+            
+            console.info(string_array);
+            console.info(alphabet_array);
+
+            // loop trough
+            for (const alphabet of alphabet_array) {
+                if (string_array.includes(alphabet)) {
+                    count_alphabet++;
+                    console.info(count_alphabet);
+                }
+            }
+            
+            // check if there are all the alphabet letters
+            return (count_alphabet >= 26) ? true : false; 
+        }
+
+        console.info(isPangram('The quick brown fox jumps over the lacy dog.'));
+    </script>
+</body>
+</html>
